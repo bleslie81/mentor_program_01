@@ -65,6 +65,10 @@ body{
     -webkit-text-fill-color:transparent;
 }
 
+.icon:hover{
+    cursor: pointer;
+}
+
 .textcontent{
     height: 100vh;
 }
