@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    position: relative;
+    width: 375px;
+    height: 812px;
+
+    /* white */
+
+    background: #FFFFFF;
+}
+
+#MP2_first_step,
+#MP2_signup-empty,
+#MP2_after_signup
+{
+    position: relative;
+    width: 375px;
+    height: 812px;
+
+    /* white */
+
+    background: #FFFFFF;
+}
+
+.hello{
+    position: absolute;
+    width: 124px;
+    height: 86px;
+    left: 24px;
+    top: 332px;
+
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 90%;
+    /* or 43px */
+    background: linear-gradient(90deg, #8C51A5 0%, #CB5E98 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.icon{
+    position: absolute;
+    left: 7.5%;
+    right: 12.5%;
+    top: 37.5%;
+    bottom: 12.5%;
+
+    /* purple_gradient */
+
+    background:-moz-linear-gradient(top, #e72c83 0%, #a742c6 100%); 
+    background: -webkit-linear-gradient(top, #e72c83 0%,#a742c6 100%); 
+    background: linear-gradient(to bottom, #e72c83 0%,#a742c6 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
+
+.textcontent{
+    height: 100vh;
+}
+
+.maintext{
+    position: absolute;
+    height: 74px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 101.91%;
+    /* identical to box height, or 73px */
+    color: #763837;
+
+}
+
+.inputbtn
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 24px;
+
+    position: absolute;
+    width: 200px;
+    height: 54px;
+    top: 609px;
+    left:20px;
+
+    /* gray_dark */
+
+    background: #222222;
+    border-radius: 30px;
+}
+
+.inputbtnactive{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 24px;
+
+    position: absolute;
+    width: 90px;
+    height: 54px;
+    left: 24px;
+    top: 718px;
+
+    cursor:pointer;
+
+    /* gray */
+
+    background: #000000;
+    border-radius: 30px;
+}
+
+.inputbtn:hover{
+    cursor: pointer;
+}
+
+.btntext{
+    position: static;
+    height: 22px;
+    left: 24px;
+    top: 16px;
+
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 120%;
+    /* identical to box height, or 22px */
+
+
+    /* white */
+
+    color: #FFFFFF;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+
+.tellme{
+    position: absolute;
+    width: 327px;
+    height: 86px;
+    left: 24px;
+    top: 80px;
+
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 90%;
+    /* or 43px */
+
+
+    /* gray_dark */
+
+    color: #222222;
+
+}
+
+.inputtext{
+    position: absolute;
+    width: 327px;
+    height: 48px;
+    left: 24px;
+    top: 238px;
+    border: 0px;
+}
+
+input[type=text] {
+    font-size: x-large;
+  }
+
+::placeholder {
+    position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 10.42%;
+
+font-family: Work Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 90%;
+/* or 43px */
+
+
+/* gray_light */
+
+color: #E8E8E8;
+}
+
+.inputdisabledbtn{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 24px;
+
+    position: absolute;
+    width: 90px;
+    height: 54px;
+    left: 24px;
+    top: 718px;
+
+    /* gray */
+
+    background: #999999;
+    border-radius: 30px;
+}
+
+.nexttext{
+    position: static;
+    height: 22px;
+    left: 24px;
+    top: 16px;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 120%;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px;
+    
+}
+
+.name{
+    position: absolute;
+    width: 327px;
+    height: 43px;
+    left: 0px;
+    top: 0px;
+
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 90%;
+    /* or 43px */
+
+
+    /* gray_dark */
+
+    color: #222222;
+
+}
+  

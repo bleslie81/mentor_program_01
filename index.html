@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <!--kezdőoldal-->
+    <div id="MP2_first_step" style="display: block;">
+        <i class="far fa-comment-alt icon"></i>
+        <div class="hello">
+            Hello chat
+        </div>
+        <div class="inputbtn" id="create">
+            <span class="nexttext">Create Account</span>
+        </div>
+    </div>
+
+    <!--második oldal-->
+    <div id="MP2_signup-empty" style="display: none;">
+        <div class="tellme">
+            Now, tell how you are
+        </div>
+        <input id="inputtext" class="inputtext" type="text" placeholder="type" onkeydown="check()"></input>
+        <div class="inputdisabledbtn" id="next" onclick="loadAfterSignup()">
+            <span class="nexttext">Next</span>
+        </div>
+    </div>
+
+    <!--harmadik oldal-->
+    <div id="MP2_after_signup" style="display: none;">
+        <div id="name" class="name"></div>
+    </div>
+
+    <script type="text/javascript">
+
+        let button1 = document.getElementById("create");
+        let button2 = document.getElementById("next");
+
+        //create account gombnyomás eseménye, lapozás
+        button1.addEventListener("click", function(){
+            let first=document.getElementById("MP2_first_step");
+            let signup=document.getElementById("MP2_signup-empty");
+            let after=document.getElementById("MP2_after_signup");
+
+            if(first.style.display==='block'){
+                first.style.display='none';
+                signup.style.display='block';
+            }
+            
+        })
+
+        //next gombnyomás eseménye, lapozás
+        button2.addEventListener("click", function(){
+            let first=document.getElementById("MP2_first_step");
+            let signup=document.getElementById("MP2_signup-empty");
+            let after=document.getElementById("MP2_after_signup");
+
+            if(signup.style.display==='block'){
+                signup.style.display='none';
+                after.style.display='block';
+            }
+            
+        })
+
+        //input mezőbe írt adat hosszának ellenőrzése
+        function check(){
+            let x=document.getElementById("next");
+            if(document.getElementById("inputtext").value.length>=2){
+                console.log("ok");
+                x.classList.remove("inputdisabledbtn");
+                x.classList.add("inputbtnactive");
+            }else{
+                x.classList.remove("inputbtnactive");
+                x.classList.add("inputdisabledbtn");
+            };
+        
+        }
+
+        //beírt név tárolása, majd megjelenítése
+        function loadAfterSignup(){
+            let name=document.getElementById("inputtext").value;
+            console.log(name);
+            localStorage.setItem('name', name);
+            document.getElementById("name").innerHTML=localStorage.getItem('name');
+        }
+
+
+    </script>
+</body>
+</html>
